@@ -1,0 +1,44 @@
+<!--
+两个inline-block+右侧calc
+理解：
+1. vertical-align避免基线对齐造成空白
+2. font-size:0;避免空白字符的存在，使得整个宽大于100%，造成右边的div掉下来
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .cont{
+        font-size: 0;
+    }
+    .left,.right{
+        display:inline-block;
+        vertical-align: top;
+    }
+    .left{
+        width:100px;
+        height:200px;
+        background:pink;
+    }
+    .right{
+        width:calc(100% - 100px);
+        height:300px;
+        background:blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

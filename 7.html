@@ -1,0 +1,41 @@
+<!--
+    flex布局
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .cont{
+            display: flex;
+        }
+        .left {
+            flex-basis: 200px;/*属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小 它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。*/
+            height:200px;
+            background: blue;
+        }
+
+        .right {
+            flex-grow:1;/*属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大 如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）*/
+            height:300px;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>

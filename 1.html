@@ -1,0 +1,49 @@
+<!--
+    左侧position:absolute+右侧margin-left
+    理解：
+    1. 当我们在一个容器里倒入足量的水时， 水一定会均匀铺满整个容器
+    2. 在页面这个河中扔一个div元素，其尺寸表现会和这水流一样铺满容器
+    3. 子绝父相
+    4. 绝对定位会脱离文档流，不占用空间
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .cont{
+            position: relative;
+        }
+        .left {
+            width: 100px;
+            height: 600px;
+            position: absolute;
+            left:0;
+            top:0;
+            background: blue;
+        }
+
+        .right {
+            margin-left: 100px;
+            height: 400px;
+            background: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cont clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>

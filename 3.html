@@ -1,0 +1,38 @@
+<!--
+    右侧margin-left + 左侧float:left
+    理解：
+    1. 浮动会使得元素脱离文档流，后面元素进行布局时，前面的浮动元素就像不存在一样。
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .clearfix{overflow:hidden;_zoom:1;}
+    .left{
+        width:100px;
+        height:200px;
+        float: left;
+        background:blue;
+    }
+    .right{
+        margin-left:100px;
+        height:400px;
+        background:pink;
+    }
+    </style>
+</head>
+<body>
+    <div class="cont clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
